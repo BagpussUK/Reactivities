@@ -8,10 +8,10 @@ export interface IActivity {
     category: string;
     city: string;
     venue: string;
-    hostUsername: string;
-    isCancelled: boolean;
-    isGoing: boolean;
-    isHost: boolean;
+    hostUsername?: string;
+    isCancelled?: boolean;
+    isGoing?: boolean;
+    isHost?: boolean;
     host?: Profile;
     attendees?: Profile[]
 }
@@ -34,10 +34,10 @@ export class Activity implements IActivity {
     category: string;
     city: string;
     venue: string;
-    hostUsername: string = ''
-    isCancelled: boolean = false
-    isGoing: boolean = false
-    isHost: boolean = false
+    hostUsername?: string
+    isCancelled?: boolean
+    isGoing?: boolean
+    isHost?: boolean 
     host?: Profile
     attendees?: Profile[]
 }
