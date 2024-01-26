@@ -27,10 +27,8 @@ export default observer(function RegisterForm() {
                     <MyTextInput placeholder="Username" name='username'/>
                     <MyTextInput placeholder="Email" name='email'/>
                     <MyTextInput placeholder="Password" name='password' type='password'/>
-                    <ErrorMessage
-                        name='error' render={() => 
-                        <ValidationError errors={errors.error}/>}
-                    />
+                    <ErrorMessage name='error' render={() => 
+                        <ValidationError errors={errors!.error} />} />
                     <Button
                         disabled={!isValid || !dirty || isSubmitting} 
                         loading={isSubmitting} 
