@@ -104,7 +104,7 @@ export default class UserStore {
         console.log(jwtToken);
         const expires = new Date(jwtToken.exp * 1000);
         console.log(expires);
-        const timeout = expires.getTime() - Date.now() - (30 * 1000);
+        const timeout = expires.getTime() - Date.now() - (60 * 1000);
         console.log(timeout);
 
         this.refreshTokenTimeout = setTimeout(this.refreshToken, timeout);
